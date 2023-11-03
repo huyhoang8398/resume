@@ -1,7 +1,6 @@
 %-------------------------
 % Resume in Latex
-% Author : DO Duy Huy Hoang
-% Based off of: https://github.com/sb2nov/resume
+% Author : Do Hoang 
 % License : MIT
 %------------------------
 
@@ -18,20 +17,9 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{graphicx} 
 \input{glyphtounicode}
-
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -64,7 +52,7 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{1pt}}
+    {#1 \vspace{-2pt}}
   }
 }
 
@@ -99,24 +87,39 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
 
-%----------HEADING----------
+%----------HEADING-----------------
 % \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 %   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : \href{tel:+11234567890}{+1-123-456-7890} \\
 % \end{tabular*}
 
-\begin{center}
-    \textbf{\Huge \scshape DO Duy Huy Hoang} \\ \vspace{1pt}
-    \small (+33)0772429711 $|$ \href{mailto:huyhoang8398@gmail.com}{\underline{huyhoang8398@gmail.com}} $|$ 
-    \href{https://linkedin.com/in/dohoang}{\underline{linkedin.com/in/dohoang}}\\
-    \href{https://huyhoang8398.github.io}{\underline{huyhoang8398.github.io}} $|$
-    \href{https://github.com/huyhoang8398}{\underline{github.com/huyhoang8398}}
-\end{center}
+
+%----------HEADING WITH IMAGE-----------------
+
+\begin{minipage}[t]{0.7\textwidth}
+  \vspace{2pt}
+  \begin{center}
+    {\Huge \scshape DO Duy Huy Hoang}
+    \\
+    \small \raisebox{-0.1\height}\faPhone\ +(33)772429711
+    ~ \href{mailto:example@examaple.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{huyhoang8398@gmail.com}}
+    ~ \href{https://huyhoang8398.github.io/}{\raisebox{-0.2\height}\faGlobe\ \underline{huyhoang8398.github.io}}  \vspace{2pt} \\
+    \href{https://linkedin.com/in/dohoang}{\raisebox{-0.2\height}\faLinkedin\ \underline{LnkedIn Profile}}
+    ~ \href{https://github.com/huyhoang8398/}{\raisebox{-0.2\height}\faGithub\ \underline{GitHub Profile}}
+  \end{center}
+
+\end{minipage}%
+\begin{minipage}[t]{0.3\textwidth}
+  \vspace{0pt} % Top align the minipage
+  \raggedleft % Right align the image
+  \includegraphics[width=1.3in]{img.png}
+\end{minipage}
+
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -127,9 +130,6 @@
     \resumeSubheading
       {University of Science and Technology Hanoi}{Hanoi, Vietnam}
       {Bachelor of Science and Technology, Undergraduated: Good}{Sept. 2016 -- Sept. 2019}
-    \resumeSubheading
-      {High School for Gifted Students, Hanoi National University of Education}{Hanoi, Vietnam}
-      {Vietnam High School Baccalaureate, Information technology class}{Sept. 2013 - May. 2016}
   \resumeSubHeadingListEnd
 
 %-----------HONORS AND AWARD-----------
@@ -165,9 +165,9 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     {\item{
         \textbf{Languages}{: Vietnamese (Native), English (IELTS 6.5), French (DELF A2) }\\
-        \textbf{Programming Languages}{: Python, C, Go, Bash} \\
+        \textbf{Programming Languages}{: Python, Bash, PHP, Go} \\
         \textbf{Industry Knowledge}{: Linux System, Virtual Machine, Cryptography, Cloud, Networking, Security}\\
-        \textbf{DevOps Stack}{: Github/Gitlab/Jenkins CI/CD tool, Promotheus \& Grafana, AWS, Docker, k8s,    Terraform}\\
+        \textbf{SRE/DevOps Stack}{: Github/Gitlab/Jenkins CI/CD tool, Promotheus \& Grafana, Loki + Promtail, AWS, Docker, k8s, Ansible, Terraform, QNAP/NAS, Proxmox, Apache/Nginx, HAproxy, CloudFlare}\\
         \textbf{Database}{: MariaDB, MySQL, MongoDB}\\
         \textbf{Developer Tools}{: Git, Docker, KVM, Xen, Linux, Vim} \\
 
@@ -178,18 +178,19 @@
 \section{Experience}
   \resumeSubHeadingListStart
        \resumeSubheading
-        {Cloud Infrastructure / DevOps Engineer}{Dec. 2022 - Now}
         {AgileBio}{Paris, France}
+        {SRE / DevOps Engineer}{Nov. 2022 - Now}
         \resumeItemListStart
-            \resumeItem{Building Infrastructure solutions for laboratories \& other industries}
+            \resumeItem{Team size: 1}
+            \resumeItem{Building Infrastructure solutions for laboratories \& other industries. Making/Publishing official Labcollector docker image. Scalling infrastructure, configuring network/firewall, maintaining different servers(mail, storage, QNAP/NAS, etc), automating development/deployment, developing AgileBio Backoffice tools. Migrating old infrastucture (Proxmox) to AWS Cloud.}
             \resumeItem{Technical stack}
             \resumeItemListStart
-                \resumeItem{Cloud: AWS Network, AWS Database, AWS Storage, AWS Compute}
-                \resumeItem{CI/CD: Jenkins}
-                \resumeItem{Monitoring: Promotheus \& Grafana}
+                \resumeItem{Cloud: AWS}
+                \resumeItem{CI/CD: Jenkins, BitBucket}
+                \resumeItem{Monitoring: Promotheus \& Grafana, Loki + Promtail}
                 \resumeItem{Database: MariaDB, MySQL}
-                \resumeItem{Docker, k8s, Linux}
-                \resumeItem{Bash, Python}
+                \resumeItem{Docker, Ansible, Terraform, k8s, Linux, KVM}
+                \resumeItem{Bash, Python, PHP, perl, HAproxy, AWS loadblanacer, QNAP/NAS, firewall(pfsense), Proxmox, Apache/Nginx, HAproxy, CloudFlare}
             \resumeItemListEnd
         \resumeItemListEnd
 
@@ -218,24 +219,6 @@
         \resumeItem{Organised and hosted tech/non-tech events at Vmodev}
       \resumeItemListEnd
       
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
-
-    \resumeSubheading
-      {Intern \& Software Developer $|$ \emph{Python, Bash, IoT}}{May. 2018 -- Jan. 2019}
-      {USTH ICT Lab \& IRD Vietnam}{Hanoi, Vietnam}
-      \resumeItemListStart
-        % \resumeItem{Remote Sensing and control of New Automatic Scan device}
-        \resumeItem{Make a communication and control system that operates the scanner both from far distance through GSM and transfer data from short distance through Bluetooth} 
-        \resumeItem{Co-authored in the article Autonomous Maeght field scanner with \href{https://scholar.google.com/citations?user=opOoWCIAAAAJ&hl=en}{\textbf{Prof. Jean-Luc Maeght}}}
-      \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
@@ -301,8 +284,5 @@
     %       \resumeItemListEnd
 
     \resumeSubHeadingListEnd
-
-
-
 %-------------------------------------------
 \end{document}
