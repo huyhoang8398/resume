@@ -28,11 +28,11 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{0.75in}
+\addtolength{\topmargin}{-0.625in}
+\addtolength{\textheight}{1.25in}
 
 \urlstyle{same}
 
@@ -109,7 +109,7 @@
     \small \raisebox{-0.1\height}\faPhone\ +(33)772429711
     ~ \href{mailto:example@examaple.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{huyhoang8398@gmail.com}}
     ~ \href{https://huyhoang8398.github.io/}{\raisebox{-0.2\height}\faGlobe\ \underline{huyhoang8398.github.io}}  \vspace{2pt} \\
-    \href{https://linkedin.com/in/dohoang}{\raisebox{-0.2\height}\faLinkedin\ \underline{LnkedIn Profile}}
+    \href{https://linkedin.com/in/dohoang}{\raisebox{-0.2\height}\faLinkedin\ \underline{LinkedIn Profile}}
     ~ \href{https://github.com/huyhoang8398/}{\raisebox{-0.2\height}\faGithub\ \underline{GitHub Profile}}
   \end{center}
 
@@ -117,7 +117,7 @@
 \begin{minipage}[t]{0.3\textwidth}
   \vspace{0pt} % Top align the minipage
   \raggedleft % Right align the image
-  \includegraphics[width=1.3in]{img.png}
+  \includegraphics[width=1.1in]{img.png}
 \end{minipage}
 
 
@@ -164,11 +164,10 @@
 \section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     {\item{
-        \textbf{Languages}{: Vietnamese (Native), English (IELTS 6.5), French (DELF A2) }\\
+        \textbf{Languages}{: Vietnamese (Native), English (IELTS 7.0), French (DELF A2) }\\
         \textbf{Programming Languages}{: Python, Bash, PHP, Go} \\
-        \textbf{Industry Knowledge}{: Linux System, Virtual Machine, Cryptography, Cloud, Networking, Security}\\
-        \textbf{SRE/DevOps Stack}{: Github/Gitlab/Jenkins CI/CD tool, Promotheus \& Grafana, Loki + Promtail, AWS, Docker, k8s, Ansible, Terraform, QNAP/NAS, Proxmox, Apache/Nginx, HAproxy, CloudFlare}\\
-        \textbf{Database}{: MariaDB, MySQL, MongoDB}\\
+        \textbf{SRE/DevOps Stack}{: Bitbucket/Gitlab/Jenkins CI/CD tool, Promotheus \& Grafana, Loki + Promtail, AWS, Docker, k8s, Ansible, Terraform, SonarQube, QNAP/NAS, Proxmox, Apache/Nginx, HAproxy, CloudFlare}\\
+        \textbf{Database}{: MariaDB, MySQL, MongoDB, PostgreSQL}\\
         \textbf{Developer Tools}{: Git, Docker, KVM, Xen, Linux, Vim} \\
 
     }}
@@ -177,9 +176,17 @@
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
+
+       \resumeSubheading
+        {Analog Way SAS}{Paris, France}
+        {SRE / DevOps Engineer}{June. 2024 - Present}
+        \resumeItemListStart
+            \resumeItem{As a DevOps/Platform engineer, I designed and implemented a secure and efficient platform for Analog Way. This included building an infrastructure on-prem Proxmox for microservices, FPGA, Linux kernal driver team, creating complex CI/CD pipelines using Gitlab CI for FPGA/Web/Linux team, and developing an observability platform with Prometheus/Grafana, code analysis with SonarQube, SquashTM. Additionally, I built in-house tools to manage, automate, and optimize infrastructure using shell script, Python, and Golang.}
+        \resumeItemListEnd
+        
        \resumeSubheading
         {AgileBio}{Paris, France}
-        {SRE / DevOps Engineer}{Nov. 2022 - Now}
+        {SRE / DevOps Engineer}{Nov. 2022 - May. 2024}
         \resumeItemListStart
             \resumeItem{Team size: 1}
             \resumeItem{Building Infrastructure solutions for laboratories \& other industries. Making/Publishing official Labcollector docker image. Scalling infrastructure, configuring network/firewall, maintaining different servers(mail, storage, QNAP/NAS, etc), automating development/deployment, developing AgileBio Backoffice tools. Migrating old infrastucture (Proxmox) to AWS Cloud.}
@@ -188,9 +195,8 @@
                 \resumeItem{Cloud: AWS}
                 \resumeItem{CI/CD: Jenkins, BitBucket}
                 \resumeItem{Monitoring: Promotheus \& Grafana, Loki + Promtail}
-                \resumeItem{Database: MariaDB, MySQL}
-                \resumeItem{Docker, Ansible, Terraform, k8s, Linux, KVM}
-                \resumeItem{Bash, Python, PHP, perl, HAproxy, AWS loadblanacer, QNAP/NAS, firewall(pfsense), Proxmox, Apache/Nginx, HAproxy, CloudFlare}
+                \resumeItem{Database: MariaDB, MySQL, PostgreSQL}
+                \resumeItem{Docker, Ansible, Terraform, k8s, Linux, KVM, Bash, Python, PHP, perl, HAproxy, AWS loadblanacer, QNAP/NAS, firewall(pfsense), Proxmox, Apache/Nginx, HAproxy, CloudFlare}
             \resumeItemListEnd
         \resumeItemListEnd
 
@@ -211,15 +217,15 @@
         \resumeItem{Organised and hosted tech/non-tech events at Vmodev}
       \resumeItemListEnd
 
-         \resumeSubheading
-      {IRD Vietnam}{Hanoi, Vietnam}
-      {Interne \& Développeur de logiciels $|$ \emph{Python, Bash, IoT}}{May. 2018 -- Janv. 2019}
-      \resumeItemListStart
-        % \resumeItem{Remote Sensing and control of New Automatic Scan device}
-        \resumeItem{Create a communication and control system that utilizes remote scanning via GSM and transfers data over short distances via Bluetooth} 
-        \resumeItem{Co-author of the article Autonomous Maeght field scanner with
-        \href{https://scholar.google.com/citations?user=opOoWCIAAAAJ&hl=en}{\textbf{Prof. Jean-Luc Maeght}}}
-      \resumeItemListEnd
+      %    \resumeSubheading
+      % {IRD Vietnam}{Hanoi, Vietnam}
+      % {Interne \& Développeur de logiciels $|$ \emph{Python, Bash, IoT}}{May. 2018 -- Janv. 2019}
+      % \resumeItemListStart
+      %   % \resumeItem{Remote Sensing and control of New Automatic Scan device}
+      %   \resumeItem{Create a communication and control system that utilizes remote scanning via GSM and transfers data over short distances via Bluetooth} 
+      %   \resumeItem{Co-author of the article Autonomous Maeght field scanner with
+      %   \href{https://scholar.google.com/citations?user=opOoWCIAAAAJ&hl=en}{\textbf{Prof. Jean-Luc Maeght}}}
+      % \resumeItemListEnd
       
 
   \resumeSubHeadingListEnd
